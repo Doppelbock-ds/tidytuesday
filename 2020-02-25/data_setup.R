@@ -48,6 +48,9 @@ clean_states <- all_states %>%
 wsj %>% 
   left_join(clean_states, by = c("name", "state")) %>% 
   write_csv(here::here("2020-02-25","measles_raw.csv"))
-write_csv(measles,here::here("2020-02-25","measles.csv"))
+
+  write_csv(measles,here::here("2020-02-25","measles.csv"))
+
+
 glimpse(wsj)
 skimr::skim(measles)
